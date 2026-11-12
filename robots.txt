@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://stevenslanguagechannel-ui.github.io/english-phrases/sitemap.xml
