@@ -63,3 +63,66 @@ figcaption { font-size: .9rem; color: var(--muted); margin-top: 6px; }
 .pager a { text-decoration: none; }
 .related h2 { font: 700 1.3rem var(--font-fun); }
 footer { border-top: 1px solid var(--line); margin-top: 32px; padding: 20px 0 40px; color: var(--muted); font-size: .9rem; }
+
+.lead { font-size: 1.05rem; color: var(--ink-2); }
+.topics { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 12px; margin: 8px 0 8px; }
+.topic { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+.topic b { display: block; font: 700 1.15rem/1.25 var(--font-fun); }
+.topic small { color: var(--muted); }
+.topic .links { display: flex; gap: 14px; margin-top: 8px; font-size: .95rem; font-weight: 600; }
+h2.sec { font: 700 1.6rem var(--font-fun); margin: 36px 0 8px; }
+.tip { color: var(--ink-2); }
+.tip b { color: var(--ink); }
+.chat { display: grid; gap: 8px; margin: 12px 0 8px; }
+.line { max-width: 85%; padding: 10px 14px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); }
+.line.r { justify-self: end; background: var(--tint); border-color: transparent; }
+.line b { display: block; font-size: .8rem; color: var(--muted); }
+.ex { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; margin: 12px 0; }
+.ex h3 { font: 700 1.1rem var(--font-fun); margin: 0 0 8px; }
+.ex label.opt { display: flex; gap: 10px; align-items: flex-start; padding: 8px 10px; border-radius: 10px; cursor: pointer; }
+.ex label.opt:hover { background: var(--tint); }
+.ex label.opt input { margin-top: 5px; }
+.ex .say { font-style: italic; }
+.ex input[type=text] { font: inherit; padding: 8px 10px; border: 2px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); width: min(100%, 18rem); }
+.ex button, .btn { font: inherit; font-weight: 600; padding: 8px 16px; border-radius: 999px; border: 0; background: var(--accent); color: var(--accent-ink); cursor: pointer; margin-top: 8px; }
+.btn.ghost { background: transparent; color: var(--accent); border: 2px solid var(--accent); }
+.fb { margin: 8px 0 0; font-weight: 600; }
+.fb.ok { color: var(--accent); }
+.fb.no { color: #c0392b; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .fb.no { color: #ff8a7a; } }
+:root[data-theme="dark"] .fb.no { color: #ff8a7a; }
+.fb small { display: block; font-weight: 400; color: var(--ink-2); }
+details.model summary { cursor: pointer; font-weight: 600; color: var(--accent); margin-top: 8px; }
+.write { display: none; }
+.key { display: none; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 16px 0; }
+.wb-phrase { border-top: 2px solid var(--line); padding-top: 24px; margin-top: 32px; }
+.wb-phrase h2 { font: 700 2rem/1.1 var(--font-fun); margin: 0 0 6px; }
+@media print {
+  :root { --bg: #fff; --surface: #fff; --ink: #000; --ink-2: #222; --muted: #555; --line: #bbb; --tint: #f1f1f1; }
+  body { font-size: 10.5pt; line-height: 1.4; background: #fff; }
+  header.top .wrap { padding-top: 0; padding-bottom: 6px; }
+  .chat { gap: 2px; margin: 6px 0; }
+  .line, .line.r { max-width: none; justify-self: stretch; border: 0; background: none; padding: 1px 0; }
+  .line b { display: inline; font-size: inherit; color: #000; }
+  .line b::after { content: ": "; }
+  .ex { padding: 8px 12px; margin: 6px 0; border-radius: 8px; }
+  .ex h3 { margin: 0 0 2px; font-size: 1rem; }
+  .ex p { margin: 2px 0; }
+  .ex label.opt { padding: 1px 6px; }
+  .meaning { font-size: 1.1rem; margin: 6px 0; }
+  .wb-phrase h2 { font-size: 1.6rem; }
+  .toc { columns: 2; }
+  header.top nav, .tools, .az, .related, .pager, .actions, footer, figure, .ex button, .fb, details.model, .back, .noprint { display: none !important; }
+  .ex { break-inside: avoid; border: 1px solid #999; }
+  .ex input[type=radio] { appearance: none; width: 12px; height: 12px; border: 1px solid #000; border-radius: 50%; }
+  .ex input[type=text] { border: 0; border-bottom: 1px solid #000; border-radius: 0; width: 14rem; }
+  .write { display: block; border-bottom: 1px solid #999; height: 1.9em; }
+  .key { display: block; break-before: page; }
+  .key h2 { font: 700 1.4rem var(--font-fun); }
+  .key li { margin-bottom: 6px; }
+  .wb-phrase { break-before: page; border: 0; margin-top: 0; }
+  .line { break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
+}
+@page { margin: 16mm; }
