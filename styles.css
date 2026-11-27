@@ -127,6 +127,7 @@ details.model summary { cursor: pointer; font-weight: 600; color: var(--accent);
 }
 @page { margin: 16mm; }
 
+[hidden] { display: none !important; }   /* .due/.mine/.mine-box set a display, which would beat the hidden attribute */
 .due { display: inline-block; min-width: 1.4em; margin-left: 4px; padding: 0 6px; border-radius: 999px; background: var(--pop); color: #1d1c19; font-size: .8rem; font-weight: 700; text-align: center; }
 .mine { display: inline-block; margin: 12px 0 0; font-size: .9rem; font-weight: 600; color: var(--accent); }
 .mine-box { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; background: var(--tint); border-radius: 14px; padding: 14px 16px; margin: 8px 0 0; }
