@@ -14,6 +14,7 @@ document.querySelectorAll('.ex').forEach(ex => {
       ok = c && c.value === ex.dataset.answer;
     }
     fb.hidden = false;
+    if (picked && ex.dataset.slug) { HWE.practised(ex.dataset.slug); HWE.paint(); }
     if (!picked) { fb.className = 'fb'; fb.textContent = 'Choose or type an answer first.'; return; }
     fb.className = 'fb ' + (ok ? 'ok' : 'no');
     fb.innerHTML = (ok ? 'Correct! ' : 'Not quite. ') + (ex.dataset.explain ? '<small>' + ex.dataset.explain + '</small>' : '');
